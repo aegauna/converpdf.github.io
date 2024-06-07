@@ -1,0 +1,87 @@
+html {
+    background-image: url(fondoPagina.png);
+}
+body {
+    text-align: center;
+}
+h1 {
+    display: block;
+    margin-top: 3%;
+    text-align: center;
+    font-size: 300%;
+    color: green;
+    text-shadow:
+    -1px -1px 0 #000,  
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+}
+#flecha {
+    display: block;
+    margin: auto;
+    margin-top: 5%;
+}
+
+#div1 {
+    margin-top: 5%;
+    border: 15px;
+    height: auto;
+    border: 6px double #aaaa;
+    border-radius: 10%;
+}
+@media (min-width: 768px) {
+  .div1 {
+    height: 15vh;
+  }
+}
+@media (min-width: 766px) {
+  .div1 {
+    height: 25vh;
+  }
+}
+.arrastra {
+    display: block;
+    text-align: center;
+    margin-top: 1%;
+    margin-bottom: 0;
+    font-size: 200%;
+    font-style: oblique;
+    color: green;
+    text-shadow:
+    -1px -1px 0 #000,  
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+}
+.subir {
+    display: block;
+    width: 15%;
+    height: 70%;
+    margin: auto;
+    transition: transform 0.3s ease;
+}
+.subir:hover {
+    transform: scale(1.3);
+}
+.botonConver {
+    display: inline-block;
+    width: 50%;
+    padding: 10px 20px;
+    margin-top: 3%;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 6px #999;
+}
+.botonConver:hover {background-color: #3e8e41;}
+.botonConver:active {
+    background-color: #3e8e41;
+    box-shadow: 0 2% #666;
+    transform: translateY(4px);
+}

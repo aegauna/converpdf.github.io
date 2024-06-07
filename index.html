@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor Imagen a PDF</title>
+    <link rel="icon" href="iconoJpgArowPdf.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Converción de Imagen a PDF</h1>
+        <img id="flecha" src="conversorImagenPdf.png" alt="">
+    </header>
+
+    <div id="div1" ondrop="dropHandler(event);" ondragover="dragOverHandler(event);">
+        <p class="arrastra">Arrastra tu imagen aquí</p>
+        <img class="subir" src="subirNube.png" draggable="true" ondragstart="drag(event)" width="336" height="69">
+    </div>
+    <input type="file" id="fileInput" style="display: none;" accept="image/*" />
+    <button type="button" class="botonConver" onclick="document.getElementById('fileInput').click();">
+    Buscar Archivo
+    </button>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js" integrity="sha384-NaWTHo/8YCBYJ59830LTz/P4aQZK1sS0SneOgAvhsIl3zBu8r9RevNg5lHCHAuQ/" crossorigin="anonymous"></script>
+    <script src="funtion.js"></script>
+</body>

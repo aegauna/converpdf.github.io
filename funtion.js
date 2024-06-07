@@ -27,7 +27,19 @@ function dragOverHandler(ev) {
         var doc = new jsPDF('p', 'mm', 'a4');
         var width = doc.internal.pageSize.getWidth();
         var height = doc.internal.pageSize.getHeight();
-        doc.addImage(event.target.result, 'JPEG', 0, 0, width, height);
+        var ratio = Math.min(width / img.width, height / img.height);
+        var newWidth = img.width * ratio;
+        var newHeight = img.height * ratio;
+
+        // Añadir la imagen al documento con la orientación correcta
+        if (img.width > img.height) {
+        // Si la imagen es más ancha que alta, rota la página
+        doc.addPage('l', 'a4');
+        doc.addImage(event.target.result, 'JPEG', 0, 0, height, width);
+        } else {
+        // Si la imagen es más alta que ancha, usa la orientación por defecto
+        doc.addImage(event.target.result, 'JPEG', 0, 0, newWidth, newHeight);
+        }
         doc.save('image.pdf');
       };
       img.src = event.target.result;

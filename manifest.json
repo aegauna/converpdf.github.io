@@ -1,0 +1,21 @@
+{
+    "short_name": "ConverPDF",
+    "name": "Conversor Imagen a PDF",
+    "icons": [
+      {
+        "src": "iconoJpgArowPdf.png",
+        "sizes": "192x192",
+        "type": "image/png"
+      },
+      {
+        "src": "iconoJpgArowPdf.png",
+        "sizes": "512x512",
+        "type": "image/png"
+      }
+    ],
+    "start_url": "index.html",
+    "background_color": "#FFFFFF",
+    "display": "standalone",
+    "scope": "/",
+    "theme_color": "#FFFFFF"
+  }

@@ -73,3 +73,12 @@ document.getElementById('fileInput').addEventListener('change', function(event) 
     };
     reader.readAsDataURL(file);
   }
+//--------------------------------------------------------------------------------
+//Service Worker te permitirá controlar las solicitudes de red y almacenanamiento en caché.
+if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
+      console.log('Service Worker registrado con éxito con alcance:', registration.scope);
+    }).catch(function(error) {
+      console.log('Registro de Service Worker fallido:', error);
+    });
+  }
